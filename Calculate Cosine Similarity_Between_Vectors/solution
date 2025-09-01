@@ -1,0 +1,26 @@
+
+import numpy as np
+import math
+def cosine_similarity(v1, v2):
+	# Implement your code here
+    
+    #dot
+    result=0
+    for i in range (len(v1)):
+        result=result+v1[i]*v2[i]
+
+    # magintute of a
+    mag_a=0
+    for i in v1:
+        mag_a=mag_a+i*i
+    mag_a=math.sqrt(mag_a)
+
+    # magnitute of b
+    mag_b=0
+    for i in v2:
+        mag_b=mag_b+i*i
+    mag_b=math.sqrt(mag_b)
+
+    #result
+    ans=result/(mag_a*mag_b)
+    return round(ans,3)
